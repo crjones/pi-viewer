@@ -9,8 +9,7 @@
   ],
   "dependencies" : {
     "now"     :  ">=0.7",
-	"express": "2.5.x",
-	"fs"
+	"express": "2.5.x"
   },
   "engine": {
     "node": "0.8.1"
