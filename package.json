@@ -1,0 +1,17 @@
+{
+  "name": "pi-viewer",
+  "version": "0.0.1",
+  "author": "crjones (Christopher Jones) <crjones@gmail.com>",
+  "description": "Pi viewer to 1,000,000 accuracy",
+  "keywords": [
+    "nowjs",
+    "pi"
+  ],
+  "dependencies" : {
+    "now"     :  ">=0.7",
+	"express": "2.5.x"
+  },
+  "engine": {
+    "node": "0.6.x"
+  }
+} 
