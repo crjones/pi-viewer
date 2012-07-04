@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Pi viewer</title>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+<script src="http://127.0.0.1:5000/nowjs/now.js"></script>
+<script type="text/javascript" src="/waypoints.min.js"></script>
+
+<script>
+var cursor = 0;
+$(document).ready(function() {
+
+  now.ready(function() {
+    now.nextChunk(cursor);
+  });
+
+});
+
+now.appendContent = function(content) {
+  $('#wp').remove();
+  if (content != 'EOF') {
+  	content += "<div id='wp'></div>";
+  	$('#infinite').append(content);
+  	cursor += 5050;
+  	$('#wp').waypoint(function() {
+    	now.nextChunk(cursor);
+  	}, {offset: '105%'});
+  }
+}
+</script>
+
+<style>
+
+</style>
+</head>
+
+<body>
+  <div id='infinite'></div>
+</body>
+</html>
