@@ -1,5 +1,10 @@
 express = require('express');
 
+io.configure(function () { 
+  io.set("transports", ["xhr-polling"]); 
+  io.set("polling duration", 10); 
+});
+
 var app = express.createServer();
 
 var port = process.env.PORT || 5000;
