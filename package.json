@@ -9,7 +9,8 @@
   ],
   "dependencies" : {
     "now"     :  ">=0.7",
-	"express": "2.5.x"
+	"express": "2.5.x",
+	"zlib": "1.0.5"
   },
   "engine": {
     "node": "0.8.1"
