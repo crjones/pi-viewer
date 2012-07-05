@@ -1,9 +1,5 @@
 express = require('express');
 
-io.configure(function () { 
-  io.set("transports", ["xhr-polling"]); 
-  io.set("polling duration", 10); 
-});
 
 var app = express.createServer();
 
@@ -20,7 +16,12 @@ app.configure(function(){
 );
 
 var nowjs = require("now");
-var everyone = nowjs.initialize(app);
+var everyone = nowjs.initialize(app, {
+    socketio: { transports: ["xhr-polling"],
+    'polling duration': 10}
+});
+
+
 
 var fs = require('fs');
 
